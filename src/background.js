@@ -1,0 +1,1 @@
+chrome.action.onClicked.addListener(async tab => { await chrome.scripting.executeScript({target: {tabId: tab.id}, func: () => { navigator.clipboard.writeText(window.location.href); alert('URL copied!'); }}); });
